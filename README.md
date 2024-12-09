@@ -34,6 +34,6 @@ This tools will print the list under the corresponding WiFi with mac address and
 ```shell
 ./print-mac-filter -m Console -g 192.168.10.1 -u xxx
 
-./print-mac-filter -m Console -g 192.168.10.1 -u xxx -d true # run before pruning
-./print-mac-filter -m Console -g 192.168.10.1 -u xxx
+./prune-clients -m Console -g 192.168.10.1 -u xxx -d true # run before pruning
+./prune-clients -m Console -g 192.168.10.1 -u xxx
 ```

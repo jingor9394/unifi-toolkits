@@ -29,6 +29,6 @@ Mac地址过滤列表中，只展示了mac地址而没有客户端名称，辨�
 ```shell
 ./print-mac-filter -m Console -g 192.168.10.1 -u xxx
 
-./print-mac-filter -m Console -g 192.168.10.1 -u xxx -d true # 清理前运行
-./print-mac-filter -m Console -g 192.168.10.1 -u xxx
+./prune-clients -m Console -g 192.168.10.1 -u xxx -d true # 清理前运行
+./prune-clients -m Console -g 192.168.10.1 -u xxx
 ```
