@@ -75,6 +75,7 @@ func (u *Unifi) Login() error {
 
 	rsp, err := u.HttpRequest.RequestRaw(url, "POST", params, headers)
 	if err != nil {
+		fmt.Printf("Failed to login\n")
 		return err
 	}
 	u.HttpRequest.StoreCookies(rsp.Cookies())
@@ -92,6 +93,7 @@ func (u *Unifi) Logout() error {
 
 	_, err := u.HttpRequest.RequestRaw(url, "POST", nil, headers)
 	if err != nil {
+		fmt.Printf("Failed to logout\n")
 		return err
 	}
 	return nil

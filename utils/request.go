@@ -77,6 +77,9 @@ func (r *HttpRequest) RequestRaw(url, method string, params map[string]interface
 	defer func() {
 		_ = rsp.Body.Close()
 	}()
+	if rsp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("http code: %d", rsp.StatusCode)
+	}
 	return rsp, nil
 }
 
