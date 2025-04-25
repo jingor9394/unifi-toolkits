@@ -272,7 +272,7 @@ func (u *Unifi) PrintMacFilterList() error {
 			return macFilterMap[macs[i]] < macFilterMap[macs[j]]
 		})
 		for _, mac := range macs {
-			fmt.Printf("%s: %s\n", mac, macFilterMap[mac])
+			fmt.Printf("%s %s\n", mac, macFilterMap[mac])
 		}
 	}
 	err = u.Logout()
